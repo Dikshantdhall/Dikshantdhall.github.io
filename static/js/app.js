@@ -66,7 +66,7 @@ d3.json("../samples.json").then(function(data){
 
 
 
-  // bubbleChart 
+// bubbleChart 
   function bubbleChart(){
     var inputName = d3.select("#selDataset").property("value");
    data.samples.forEach(function(sample){
@@ -97,58 +97,13 @@ d3.json("../samples.json").then(function(data){
   }
   bubbleChart();
 
-
+    // Gauage Chart
 
   function gaugeChart(){
     var inputName = d3.select("#selDataset").property("value");
     data.metadata.forEach(function(sample){
       if(sample.id == inputName){
         var freq = sample.wfreq;
-      //   var traceGauge = {
-      //   type: 'indicator',
-      //   showlegend: false,
-      //   hole: 0.4,
-      //   mode:"gauge +number",
-      //   rotation: 90,
-      //   values: [ 81/9, 81/9, 81/9, 81/9, 81/9, 81/9, 81/9, 81/9, 81/9, 81],
-      //   text: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9'],
-      //   direction: 'clockwise',
-      //   textinfo: 'text',
-      //   textposition: 'inside',
-      //   marker: {
-      //     colors: ['','','','','','','','','','white'],
-      //     labels: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9'],
-      //     hoverinfo: 'label'
-      //   }
-      // }
-      //   // needle
-      //   var degrees = 50, radius = .9
-      //   var radians = degrees * Math.PI / 180
-      //   var x = -1 * radius * Math.cos(radians) 
-      //   var y = radius * Math.sin(radians)
-    
-      //   var gaugeLayout = {
-      //     shapes: [{
-      //       type: 'line',
-      //       x0: 0.5,
-      //       y0: 0.5,
-      //       x1: 0.6,
-      //       y1: 0.6,
-      //       line: {
-      //         color: 'black',
-      //         width: 3
-      //       }
-      //     }],
-      //     title: 'Chart',
-      //     xaxis: {visible: false, range: [-1, 1]},
-      //     yaxis: {visible: false, range: [-1, 1]}
-      //   }
-    
-      //   var dataGauge = [traceGauge];
-    
-      //   Plotly.plot('gauge', dataGauge, gaugeLayout)
-      // }
-    // })
         var data = [
           {
             domain: { x: [0, 1], y: [0, 1] },
